@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ModalCalendar from './ModalCalendar';
 import TourCard from './TourCard';
 import CalendarApp from './CalendarApp';
-import { useDate } from './DateContext';
+import { useDate } from '../Context/DateContext';
 
 function TourPage() {
     const { selectedDate, setSelectedDate } = useDate(); // Lấy ngày đã chọn từ context
@@ -45,7 +45,7 @@ function TourPage() {
 
     return (
         <div className="p-5 w-full justify-center items-center">
-            <div className='w-[80%] mx-auto'>
+            <div className='w-[100%] mx-auto'>
 
                     <CalendarApp selectedDate={selectedDate} />
                     <div className="mt-4">
