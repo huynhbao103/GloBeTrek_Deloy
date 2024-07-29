@@ -80,7 +80,7 @@ export default function Modal({ onRecaptchaToken = () => {} }) {
             setInputError("Vui lòng nhập địa chỉ email hoặc số điện thoại hợp lệ.");
         } else if (!validationResult === "phoneInvalidStart") {
             setInputError("Số điện thoại phải bắt đầu bằng 0.");
-        } else if (!validationResult === "phoneTooLong") {
+        } else if (validationResult === "phoneTooLong") {
             setInputError("Số điện thoại không được vượt quá 10 chữ số.");
         } else {
             setInputError("");
